@@ -20,8 +20,17 @@ fun WaterCounter(modifier: Modifier = Modifier) {
         var count by rememberSaveable {
           mutableIntStateOf(0)
         }
-        Text("You've had $count glasses.")
-        Button(onClick = { count++ }, Modifier.padding(top = 8.dp)) {
+        if(count > 0) {
+            // This text is present if the button has been clicked
+            // at least once; absent otherwise
+            Text("You've had $count glasses.")
+        }
+
+        Button(
+            onClick = { count++ },
+            Modifier.padding(top = 8.dp),
+            enabled = count < 10
+        ) {
             Text("Add one")
         }
     }
