@@ -2,6 +2,7 @@ package com.example.basicstatecodelab
 
 import WellnessScreen
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.basicstatecodelab.ui.theme.BasicStateCodelabTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
